@@ -2,7 +2,7 @@
 
 case "$1" in 
 start)
-   /usr/share/keycloak-server/bin/standalone.sh &
+   /usr/share/keycloak-server/bin/standalone.sh -b=0.0.0.0 &
    echo $!>/var/run/keycloak-server.pid
    ;;
 stop)
