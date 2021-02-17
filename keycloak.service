@@ -1,0 +1,13 @@
+[Unit]
+Description=Keycloak standalone service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/share/keycloak/bin/standalone.sh -b=0.0.0.0
+
+[Install]
+WantedBy=multi-user.target
