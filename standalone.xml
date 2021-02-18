@@ -140,7 +140,7 @@
                 </datasource>
                 <datasource jndi-name="java:jboss/datasources/KeycloakDS" pool-name="KeycloakDS" enabled="true" use-java-context="true" statistics-enabled="${wildfly.datasources.statistics-enabled:${wildfly.statistics-enabled:false}}">
                     <connection-url>jdbc:${keycloak.databaseUrl:postgresql://localhost/keycloak}</connection-url>
-                    <driver>postgres</driver>
+                    <driver>postgresql</driver>
                     <pool>
                        <max-pool-size>${kaycloak.database.pool:30}</max-pool-size>
                     </pool>
